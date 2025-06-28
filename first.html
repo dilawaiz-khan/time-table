@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LCWU Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f1f5;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      width: 800px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .left {
+      background: #c1974d;
+      width: 40%;
+      padding: 40px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left h2 {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .right {
+      width: 60%;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .right input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .right button {
+      width: 100%;
+      padding: 12px;
+      background-color: #c1974d;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .right button:hover {
+      background-color: #a97c3d;
+    }
+
+    .right .faculty-link {
+      margin-top: 10px;
+      color: #8a5b00;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/LCWU_Logo.svg/1200px-LCWU_Logo.svg.png" alt="LCWU Logo" width="100">
+      <h2>LAHORE COLLEGE for<br>WOMEN UNIVERSITY</h2>
+    </div>
+    <div class="right">
+      <input type="number" id="roll" placeholder="Enter your Roll No" />
+      <input type="password" id="password" placeholder="Enter password" />
+      <button onclick="authenticate()">Login</button>
+      <span class="faculty-link">Login as Faculty ?</span>
+    </div>
+  </div>
+
+
+  <script>
+    function authenticate() {
+      const roll = document.getElementById('roll').value;
+      const dob = document.getElementById('dob').value;
+
+      if (!roll || !dob) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Dummy check - you can replace this with real backend logic
+      if (roll === "12345" && dob === "2000-01-01") {
+        alert("Login successful!");
+        // window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid credentials.");
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #eeeeee;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrapper {
+      display: flex;
+      height: 100vh;
+      position: relative;
+    }
+
+    .background {
+      width: 40%;
+      background-color: #C6A361;
+      clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+      
+    }
+
+    .foreground {
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      left: 10%;
+      width: 80%;
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding:30px;
+    }
+    .container {
+      display: flex;
+      width: 800px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      
+    }
+   
+ 
+ .left {
+  width: 40%;
+  padding: 40px;
+  color: #73220F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+ .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;   
+  width: max-content;    
+}
+
+
+.text-box h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #73220F;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.text-box .line1 {
+  font-weight: bold;
+}
+
+.text-box .line2 {
+  font-weight: bold;
+}
+img{
+  padding-left: 20px;
+}
+
+
+  .right {
+      width: 60%;
+    padding-top: 10%;
+    padding-left: 30%;
+    
+    }
+
+    .right input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #c1974d;
+      border-radius: 5px;
+    }
+
+    .right button {
+      width: 100%;
+      padding: 12px;
+      background-color: #c1974d;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #form-title{
+      color: #c1974d;
+    }
+    .toggle-link {
+  color: #c1974d;
+  cursor: pointer;
+  font-weight: bold;
+}
+#toggle-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+    .right button:hover {
+      background-color: #a97c3d;
+    }
+
+    .right .faculty-link {
+      margin-top: 10px;
+      color: #73220F;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+    }
