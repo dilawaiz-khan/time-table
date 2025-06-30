@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timetable - LCWU</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+     <div class="lcwu"> <img src="lcwu-logo.png" alt="LCWU Logo" class="logo">
+      <h3>LCWU</h3> </div>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Courses</li>
+          <li>Teachers</li>
+          <li>Rooms</li>
+          <li>Timetables</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Time Table</h2>
+        <div class="profile">
+          <button class="add-btn">Add TimeTable</button>
+          <span class="username">john</span>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <div class="timetable-wrapper">
+       <div class="header">
+  <button onclick="changeDate(-1)">Previous</button>
+  <h2 id="date-title">Monday, April 15, 2025</h2>
+
+<button class="download-btn" onclick="downloadPDF()">Download Timetable as PDF</button>
+
+  <button onclick="changeDate(1)">Next</button>
+     </div>
+
+        <table  id="timetable" class="timetable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00 AM</td>
+              <td>
+                 <div class="slot" onclick="editSlot(this)">
+                <strong>Calculus II</strong><br>
+                MATH 101<br>
+                Maam Aasma
+                </div>
+              </td>
+              <td>
+                  <div class="slot" onclick="editSlot(this)">
+                    
+                   <a href="#">Edit</a> </div> </td>
+              <td>
+                <div class="slot" onclick="editSlot(this)">
+                <strong>Computer Network</strong><br>
+                CS 150<br>
+                Maam Mariam
+                </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>9:00 AM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>
+            <div class="slot" onclick="editSlot(this)">
+                <strong>Software Requirements</strong><br>
+                SE 120<br>
+                Maam Ayesha
+              </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"><a href="#">Edit</a></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)">
+                <strong>Physics</strong><br>
+                PHYS 105<br>
+                Maam Amara
+                </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>11:00 AM</td>
+              <td><div class="slot" onclick="editSlot(this)">
+                <strong>Software Requirements</strong><br>
+                SE 120<br>
+                Maam Ayesha
+               </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            
+            <tr>
+              <td>12:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>01:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>02:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>03:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>04:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

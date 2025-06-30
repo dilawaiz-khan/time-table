@@ -31,4 +31,3 @@
       //  Here you'd send signup data to Django backend
     }
   }
-
