@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses - LCWU</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="lcwu">
+        <img src="lcwu-logo.png" alt="LCWU Logo" class="logo">
+        <h3>LCWU</h3>
+      </div>
+      <nav>
+        <ul>
+           <a href="dashboard.html"><li>Dashboard</li> </a>
+          <a href="course.html"></a><li class="active">Courses</li> </a>
+          <li>Teachers</li>
+          <li>Rooms</li>
+          <li>Timetables</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h2>Courses</h2>
+        <div class="profile">
+          <button class="add-btn">Add Course</button>
+          <span class="username">john</span>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </header>
+
+      <!-- Courses Table Section -->
+      <div class="timetable-wrapper">
+        <div class="timetable-header" style="justify-content: space-between;">
+          <h3>Course List</h3>
+        </div>
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Course Name</th>
+              <th>Department</th>
+              <th>Credit</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody id="course-table">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="course.js"></script>
+</body>
+</html>

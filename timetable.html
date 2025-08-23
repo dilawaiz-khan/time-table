@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <div class="timetable-wrapper">
+       <div class="header">
+  <button onclick="changeDate(-1)">Previous</button>
+  <h2 id="date-title">Monday, April 15, 2025</h2>
+
+<button class="download-btn" onclick="downloadPDF()">Download Timetable as PDF</button>
+
+  <button onclick="changeDate(1)">Next</button>
+     </div>
+
+        <table  id="timetable" class="timetable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8:00 AM</td>
+              <td>
+                 <div class="slot" onclick="editSlot(this)">
+                <strong>Calculus II</strong><br>
+                MATH 101<br>
+                Maam Aasma
+                </div>
+              </td>
+              <td>
+                  <div class="slot" onclick="editSlot(this)">
+                    
+                   <a href="#">Edit</a> </div> </td>
+              <td>
+                <div class="slot" onclick="editSlot(this)">
+                <strong>Computer Network</strong><br>
+                CS 150<br>
+                Maam Mariam
+                </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>9:00 AM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>10:00 AM</td>
+              <td>
+            <div class="slot" onclick="editSlot(this)">
+                <strong>Software Requirements</strong><br>
+                SE 120<br>
+                Maam Ayesha
+              </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"><a href="#">Edit</a></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)">
+                <strong>Physics</strong><br>
+                PHYS 105<br>
+                Maam Amara
+                </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>11:00 AM</td>
+              <td><div class="slot" onclick="editSlot(this)">
+                <strong>Software Requirements</strong><br>
+                SE 120<br>
+                Maam Ayesha
+               </div>
+              </td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            
+            <tr>
+              <td>12:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>01:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>02:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>03:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+            <tr>
+              <td>04:00 PM</td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+              <td><div class="slot" onclick="editSlot(this)"></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+<!-- Modal -->
+<div id="editModal" class="modal" style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+  <h3>Add Time Slot</h3>
+  <form id="editForm">
+    <div class="form-group">
+      <label for="courseInput">Course:</label>
+      <input type="text" id="courseInput" required />
+    </div>
+
+    <div class="form-group">
+      <label for="teacherInput">Teacher:</label>
+      <input type="text" id="teacherInput" required />
+    </div>
+
+    <div class="form-group">
+      <label for="roomInput">Room:</label>
+      <input type="text" id="roomInput" required />
+    </div>
+
+    <div class="button-group">
+      <button type="button" onclick="closeModal()">Cancel</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>
+
+
+<!-- Overlay -->
+<div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); z-index: 999;" onclick="closeModal()"></div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

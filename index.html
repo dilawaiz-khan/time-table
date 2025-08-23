@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>time table generator </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="background"></div>
+
+    <div class="foreground">
+      <div class="container">
+  
+    <div class="left"> 
+      <!-- handle the lcwu pic and text -->
+  <img id="img" src="lcwu-logo.png" alt="LCWU Logo" width="100">
+  <div class="text-box">
+    <h2 class="line1">LAHORE COLLEGE for</h2>
+    <h2 class="line2">WOMEN UNIVERSITY</h2>
+  </div>
+</div>
+    <!-- handle the form -->
+    <div class="right">
+    <h3 id="form-title">Login</h3>
+  <input type="email" id="email" placeholder="Enter your Email" />
+  <input type="password" id="password" placeholder="Enter your Password" />
+
+  <button onclick="handleSubmit()">Login</button>
+
+  <p id="toggle-text">Don't have an account? <span onclick="toggleForm()" class="toggle-link" color="#c1974d"> Sign Up</span></p>
+
+  <span class="faculty-link">Login as Faculty ?</span>
+</div>
+
+  </div>
+    </div>
+  </div>
+ <script src="signup.js"></script>
+</body>
+</html>
