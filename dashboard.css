@@ -199,6 +199,7 @@ table.timetable {
   .main-content {
     padding: 10px;
   }
+
   /* Date row: Previous left, Date center, Next right */
   .timetable-header {
     display: flex;
